@@ -12,4 +12,6 @@ def main():
     elif collection_mode == "mqtt":
         mqtt_run()
     else:
-        raise EnvironmentError("The COLLECTION_MODE environment variable must be set as 'http' or 'mqtt'")
+        raise OSError(
+            "The COLLECTION_MODE environment variable must be set as 'http' or 'mqtt'"
+        )

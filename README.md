@@ -36,5 +36,7 @@ docker build . -t thebeege/juseong-fake-sensors:latest
 To run:
 
 ```shell
-docker run -e COLLECTION_MODE=http -p 8000:8000 ghcr.io/thebeege/juseong-fake-sensors:latest
+docker run -p 8000:8000 ghcr.io/thebeege/juseong-fake-sensors:latest
 ```
+
+Then open up your browser to the [Swagger docs page](http://127.0.0.1:8000/docs)

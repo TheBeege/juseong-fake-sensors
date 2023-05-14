@@ -2,7 +2,6 @@ from typing import Union
 
 from fastapi import APIRouter
 
-
 router = APIRouter()
 
 
@@ -12,5 +11,5 @@ def list_sensors():
 
 
 @router.get("/sensors/{sensor_id}")
-def read_sensor(item_id: int, q: Union[str, None] = None):
+def read_sensor(item_id: int, q: str | None = None):
     return {"item_id": item_id, "q": q}
