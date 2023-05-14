@@ -26,6 +26,11 @@ dependencies = [
     "uvicorn[standard]~=0.22.0"
 ]
 
+[project.optional-dependencies]
+dev = [
+    "pre-commit"
+]
+
 [project.urls]  # Optional
 "Homepage" = "https://github.com/TheBeege/juseong-fake-sensors"
 "Bug Reports" = "https://github.com/TheBeege/juseong-fake-sensors/issues"
@@ -38,3 +43,11 @@ fake_sensors = "fake_sensors.main:main"
 # https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/
 requires = ["setuptools>=58.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 79
+target-version = "py311"
+
+[tool.isort]
+profile = "black"
+line_length = 79
