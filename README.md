@@ -2,7 +2,22 @@
 
 Just some fake sensor systems for Juseong to practice building data systems from
 
-## Setup
+## Usage
+
+First, make sure you have [Docker installed](https://docs.docker.com/desktop/) or
+[Rancher](https://rancherdesktop.io/) with the Docker CLI.
+
+To run:
+
+```shell
+docker run --pull=always -p 8000:8000 ghcr.io/thebeege/juseong-fake-sensors:latest
+```
+
+Then open up your browser to the [Swagger docs page](http://127.0.0.1:8000/docs)
+
+## Development
+
+### Setup
 
 For local dev:
 
@@ -13,7 +28,7 @@ python -m pip install -e .[dev]
 pre-commit install
 ```
 
-## Running
+### Running
 
 After setup:
 
@@ -25,18 +40,10 @@ Then open up your browser to the [Swagger docs page](http://127.0.0.1:8000/docs)
 
 MQTT mode is pending. HTTP mode is lacking the actual fake data yet.
 
-## Docker
+### Docker
 
 To build:
 
 ```shell
 docker build . -t thebeege/juseong-fake-sensors:latest
 ```
-
-To run:
-
-```shell
-docker run -p 8000:8000 ghcr.io/thebeege/juseong-fake-sensors:latest
-```
-
-Then open up your browser to the [Swagger docs page](http://127.0.0.1:8000/docs)

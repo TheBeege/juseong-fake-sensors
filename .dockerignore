@@ -4,3 +4,5 @@ LICENSE
 README.md
 venv
 src/juseong_fake_sensors.egg-info
+.pre-commit-config.yaml
+.github
